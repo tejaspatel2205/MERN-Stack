@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maths Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+        .result {
+            background-color: #fff;
+            padding: 20px;
+            margin: 30px auto;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Results</h1>
+    <div class="result">
+        <p><strong>First Number:</strong> <%= a %></p>
+        <p><strong>Second Number:</strong> <%= b %></p>
+        <p><strong>Addition:</strong> <%= add %></p>
+        <p><strong>Subtraction:</strong> <%= sub %></p>
+        <p><strong>Multiplication:</strong> <%= mul %></p>
+        <p><strong>Division:</strong> <%= div %></p>
+    </div>
+    <a href="/maths">Go Back</a>
+</body>
+</html>
