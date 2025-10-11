@@ -1,0 +1,180 @@
+/* 🌟 Global Styles */
+body {
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    color: #333;
+}
+
+/* ✨ Header */
+h1 {
+    text-align: center;
+    color: #4a47a3;
+    margin-bottom: 25px;
+    font-size: 2em;
+    background: linear-gradient(90deg, #4a47a3, #009ffd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 🔗 Links */
+a {
+    text-decoration: none;
+    color: #009ffd;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4a47a3;
+}
+
+/* 📦 Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #ffffff, #f0f4ff);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 🧾 Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background: linear-gradient(135deg, #009ffd, #2a2a72);
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f8ff;
+}
+
+tr:nth-child(odd) {
+    background-color: #fafcff;
+}
+
+tr:hover {
+    background-color: #e8f0ff;
+    transition: background-color 0.3s ease;
+}
+
+/* 📝 Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+label {
+    font-weight: 600;
+    color: #4a47a3;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #009ffd;
+    box-shadow: 0 0 8px rgba(0, 159, 253, 0.3);
+    background-color: #f0f8ff;
+}
+
+/* 🎨 Button Styling */
+button {
+    padding: 12px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 114, 255, 0.3);
+}
+
+/* 🔧 Action Links */
+.action-links a {
+    margin-right: 12px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.action-links a.edit {
+    color: #2ecc71;
+}
+
+.action-links a.edit:hover {
+    color: #27ae60;
+    background-color: rgba(46, 204, 113, 0.1);
+}
+
+.action-links a.delete {
+    color: #e74c3c;
+}
+
+.action-links a.delete:hover {
+    color: #c0392b;
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 600px) {
+
+    table,
+    th,
+    td {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}

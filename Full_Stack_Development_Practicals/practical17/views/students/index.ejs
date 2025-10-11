@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Students List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Records</h1>
+        <a href="/students/add">Add New Student</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Course</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% students.forEach(student=> { %>
+                    <tr>
+                        <td>
+                            <%= student.name %>
+                        </td>
+                        <td>
+                            <%= student.email %>
+                        </td>
+                        <td>
+                            <%= student.phone %>
+                        </td>
+                        <td>
+                            <%= student.course %>
+                        </td>
+                        <td class="action-links">
+                            <a href="/students/edit/<%= student._id %>" class="edit">Edit</a>
+                            <a href="/students/delete/<%= student._id %>" class="delete"
+                                onclick="return confirm('Are you sure?')">Delete</a>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
