@@ -26,15 +26,15 @@ app.post('/contact', async (req, res) => {
     let transporter = nodemailer.createTransport({
         service: 'gmail', // or your email provider
         auth: {
-            user: 'kbnisargpatel001454@gmail.com',       // replace with your email
-            pass: 'xlnq guhb bzgv dpaa' // use app password for Gmail
+            user: 'tejaspatel220505@gmail.com',       // replace with your email
+            pass: 'zlnq gubb mzgv djaa' // use app password for Gmail
         }
     });
 
     // Mail options
     let mailOptions = {
         from: email,
-        to: '23cs070@charusat.edu.in', // replace with your email
+        to: '23cs075@charusat.edu.in', // replace with your email
         subject: subject,
         text: `Message from: ${name}\nEmail: ${email}\n\n${message}`
     };
@@ -51,4 +51,5 @@ app.post('/contact', async (req, res) => {
 // Start server
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}/contact`);
+
 });
