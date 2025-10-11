@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* ✨ Modern gradient background: cool blues & purples */
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* 🧊 Glassmorphism card */
+        .contact-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 45px rgba(0, 0, 0, 0.5);
+            width: 450px;
+            text-align: center;
+            color: #e8f1ff;
+            animation: fadeIn 1.2s ease-in-out;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 55px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            margin: 0 0 30px 0;
+            font-size: 34px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, #74f9ff, #a389f4, #ffb6b9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        /* 🎨 Input fields with neon focus */
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            outline: none;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.4s ease;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: rgba(255, 255, 255, 0.65);
+            font-style: italic;
+        }
+
+        input:focus,
+        textarea:focus {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #74f9ff;
+            box-shadow: 0 0 15px #74f9ff;
+            transform: scale(1.03);
+        }
+
+        /* 🌈 Button with aurora gradient */
+        button {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 600;
+            transition: all 0.4s ease;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #2575fc, #6a11cb);
+            transform: translateY(-4px) scale(1.04);
+            box-shadow: 0 8px 25px rgba(102, 175, 255, 0.4);
+        }
+
+        /* ✅ Success & ❌ Error messages */
+        .success {
+            color: #00ffb3;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+            background: rgba(0, 255, 179, 0.15);
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 255, 179, 0.3);
+            box-shadow: 0 0 10px rgba(0, 255, 179, 0.25);
+        }
+
+        .error {
+            color: #ff5c93;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+            background: rgba(255, 92, 147, 0.15);
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 92, 147, 0.3);
+            box-shadow: 0 0 10px rgba(255, 92, 147, 0.25);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 📱 Responsive for mobile */
+        @media (max-width: 500px) {
+            .contact-card {
+                width: 90%;
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            input,
+            textarea {
+                padding: 12px;
+                margin: 10px 0;
+                font-size: 15px;
+            }
+
+            button {
+                padding: 12px 25px;
+                font-size: 15px;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact-card">
+        <h1>Contact Me</h1>
+
+        <% if (message) { %>
+            <p class="success">
+                <%= message %>
+            </p>
+            <% } %>
+
+                <% if (error) { %>
+                    <p class="error">
+                        <%= error %>
+                    </p>
+                    <% } %>
+
+                        <form action="/contact" method="POST">
+                            <input type="text" name="name" placeholder="Your Name" required />
+                            <input type="email" name="email" placeholder="Your Email" required />
+                            <input type="text" name="subject" placeholder="Subject" required />
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+    </div>
+</body>
+
+</html>
