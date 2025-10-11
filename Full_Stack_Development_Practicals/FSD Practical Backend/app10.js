@@ -26,7 +26,7 @@ app.post('/contact', async (req, res) => {
     let transporter = nodemailer.createTransport({
         service: 'gmail', // or your email provider
         auth: {
-            user: 'tejaspatel220505@gmail.com',       // replace with your email
+            user: 'tejaspatel22505@gmail.com',       // replace with your email
             pass: 'zlnq gubb mzgv djaa' // use app password for Gmail
         }
     });
@@ -53,3 +53,4 @@ app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}/contact`);
 
 });
+
