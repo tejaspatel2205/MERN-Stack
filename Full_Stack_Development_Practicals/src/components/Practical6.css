@@ -1,0 +1,115 @@
+/* 🌈 Overall Container */
+.todo-container {
+    max-width: 420px;
+    margin: 60px auto;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 🏷️ Title */
+h1 {
+    color: #0d47a1;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* 📝 Input Form */
+.todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+/* 🔤 Input Field */
+.todo-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #90caf9;
+    border-radius: 6px;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.todo-input:focus {
+    border-color: #42a5f5;
+    box-shadow: 0 0 5px rgba(66, 165, 245, 0.6);
+    outline: none;
+}
+
+/* ➕ Add Button */
+.todo-add {
+    padding: 10px 16px;
+    font-size: 16px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.todo-add:hover {
+    background-color: #0d47a1;
+    transform: scale(1.05);
+}
+
+/* 📜 List Styling */
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ✅ Each To-Do Item */
+.todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.1s ease;
+}
+
+.todo-list li:hover {
+    transform: translateY(-2px);
+}
+
+/* ✍️ Completed Item */
+.todo-list li.completed span {
+    text-decoration: line-through;
+    color: #90a4ae;
+}
+
+/* 🖊️ Text */
+.todo-list li span {
+    flex: 1;
+    text-align: left;
+    font-size: 16px;
+    color: #212121;
+    cursor: pointer;
+}
+
+/* 🗑️ Delete Button */
+.todo-delete {
+    padding: 6px 12px;
+    background-color: #ef5350;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.todo-delete:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+}
